@@ -14,6 +14,9 @@ namespace MissionPlanner.Controls
             {
                 ShowLinkStats?.Invoke(this, EventArgs.Empty);
             };
+
+            cmb_Connection.Top = cmb_sysid.Top;
+            cmb_sysid.Left = cmb_Connection.Right;
         }
 
         public event EventHandler ShowLinkStats;

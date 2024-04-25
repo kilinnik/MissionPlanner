@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using MissionPlanner.Utilities;
+using System.Windows.Forms;
 
 namespace MissionPlanner.GCSViews
 {
@@ -61,6 +62,7 @@ namespace MissionPlanner.GCSViews
             this.backstageViewPagesonar = new System.Windows.Forms.Label();
             this.backstageViewPagetradheli = new System.Windows.Forms.Label();
             this.backstageViewPagewizard = new System.Windows.Forms.Label();
+            this.t = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
             // backstageView
@@ -219,34 +221,19 @@ namespace MissionPlanner.GCSViews
             // InitialSetup
             // 
             this.Controls.Add(this.backstageViewPageaccel);
-            this.Controls.Add(this.backstageViewPageairspeed);
-            this.Controls.Add(this.backstageViewPageAntTrack);
-            this.Controls.Add(this.backstageViewPagebatmon);
-            this.Controls.Add(this.backstageViewPageBatt2);
             this.Controls.Add(this.backstageViewPagecompass);
-            this.Controls.Add(this.backstageViewPagecompassmot);
-            this.Controls.Add(this.backstageViewPageESC);
-            this.Controls.Add(this.backstageViewPageESP);
             this.Controls.Add(this.backstageViewPageflmode);
-            this.Controls.Add(this.backstageViewPageframetype);
-            this.Controls.Add(this.backstageViewPagefs);
-            this.Controls.Add(this.backstageViewPagefw);
-            this.Controls.Add(this.backstageViewPagefwdisabled);
-            this.Controls.Add(this.backstageViewPagegimbal);
-            this.Controls.Add(this.backstageViewPagehwbt);
-            this.Controls.Add(this.backstageViewPageinstfw);
-            this.Controls.Add(this.backstageViewPagemand);
             this.Controls.Add(this.backstageViewPageMotorTest);
-            this.Controls.Add(this.backstageViewPageopt);
-            this.Controls.Add(this.backstageViewPageoptflow);
-            this.Controls.Add(this.backstageViewPageosd);
-            this.Controls.Add(this.backstageViewPageParachute);
-            this.Controls.Add(this.backstageViewPagePX4Flow);
             this.Controls.Add(this.backstageViewPageradio);
-            this.Controls.Add(this.backstageViewPageSikradio);
-            this.Controls.Add(this.backstageViewPagesonar);
-            this.Controls.Add(this.backstageViewPagetradheli);
-            this.Controls.Add(this.backstageViewPagewizard);
+
+            var flightData = new FlightData();
+            this.t.TabPages.Add(flightData.tabPagemessages);
+            this.t.TabPages.Add(flightData.tabTLogs);
+            System.ComponentModel.ComponentResourceManager res = new System.ComponentModel.ComponentResourceManager(typeof(FlightData));
+            res.ApplyResources(this.t, "tabControlactions");
+            this.t.Dock = DockStyle.Bottom;
+            this.Controls.Add(this.t);
+
             this.Controls.Add(this.backstageView);
             this.Name = "InitialSetup";
             resources.ApplyResources(this, "$this");
@@ -289,8 +276,8 @@ namespace MissionPlanner.GCSViews
         private Label backstageViewPagesonar;
         private Label backstageViewPagetradheli;
         private Label backstageViewPagewizard;
+        private System.Windows.Forms.TabControl t;
 
         internal Controls.BackstageView.BackstageView backstageView;
-
     }
 }

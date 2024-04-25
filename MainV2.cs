@@ -563,8 +563,6 @@ namespace MissionPlanner
 
         public void updateLayout(object sender, EventArgs e)
         {
-            MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
-            MenuHelp.Visible = DisplayConfiguration.displayHelp;
             MissionPlanner.Controls.BackstageView.BackstageView.Advanced = DisplayConfiguration.isAdvancedMode;
 
             // force autohide on
@@ -675,15 +673,6 @@ namespace MissionPlanner
                 else if (!DisplayConfiguration.displayDataflashTab && t.TabPages.Contains(FlightData.tablogbrowse))
                 {
                     t.TabPages.Remove(FlightData.tablogbrowse);
-                }
-
-                if (DisplayConfiguration.displayMessagesTab && !t.TabPages.Contains(FlightData.tabPagemessages))
-                {
-                    t.TabPages.Add(FlightData.tabPagemessages);
-                }
-                else if (!DisplayConfiguration.displayMessagesTab && t.TabPages.Contains(FlightData.tabPagemessages))
-                {
-                    t.TabPages.Remove(FlightData.tabPagemessages);
                 }
 
                 t.SelectedIndex = 0;

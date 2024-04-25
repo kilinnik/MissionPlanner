@@ -214,6 +214,8 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txt_surveyinDur);
             this.panel2.Name = "panel2";
+            //this.panel2.Visible = false;
+            //this.panel2.Enabled = false;
             // 
             // but_restartsvin
             // 

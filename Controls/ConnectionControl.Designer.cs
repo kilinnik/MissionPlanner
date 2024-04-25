@@ -37,10 +37,8 @@
             // 
             // cmb_Baud
             // 
-            this.cmb_Baud.BackColor = System.Drawing.Color.Black;
-            this.cmb_Baud.DropDownWidth = 110;
-            this.cmb_Baud.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.cmb_Baud, "cmb_Baud");
+            this.cmb_Baud.Enabled = false;
+            this.cmb_Baud.Visible = false;
             this.cmb_Baud.Items.AddRange(new object[] {
             resources.GetString("cmb_Baud.Items"),
             resources.GetString("cmb_Baud.Items1"),

@@ -554,19 +554,8 @@ namespace MissionPlanner.GCSViews
             // 
             this.tabControlactions.ContextMenuStrip = this.contextMenuStripactionstab;
             this.tabControlactions.Controls.Add(this.tabQuick);
-            this.tabControlactions.Controls.Add(this.tabActions);
-            this.tabControlactions.Controls.Add(this.tabPagemessages);
-            this.tabControlactions.Controls.Add(this.tabActionsSimple);
-            this.tabControlactions.Controls.Add(this.tabPagePreFlight);
-            this.tabControlactions.Controls.Add(this.tabGauges);
-            this.tabControlactions.Controls.Add(this.tabTransponder);
-            this.tabControlactions.Controls.Add(this.tabStatus);
-            this.tabControlactions.Controls.Add(this.tabServo);
-            this.tabControlactions.Controls.Add(this.tabAuxFunction);
-            this.tabControlactions.Controls.Add(this.tabScripts);
-            this.tabControlactions.Controls.Add(this.tabPayload);
+             this.tabControlactions.Controls.Add(this.tabPagemessages);
             this.tabControlactions.Controls.Add(this.tabTLogs);
-            this.tabControlactions.Controls.Add(this.tablogbrowse);
             resources.ApplyResources(this.tabControlactions, "tabControlactions");
             this.tabControlactions.Name = "tabControlactions";
             this.tabControlactions.SelectedIndex = 0;
@@ -2545,6 +2534,8 @@ namespace MissionPlanner.GCSViews
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
             this.label6.Tag = "custom";
+            this.label6.Visible = false;
+            this.label6.Enabled = false;
             // 
             // label5
             // 
@@ -2552,6 +2543,8 @@ namespace MissionPlanner.GCSViews
             this.label5.ForeColor = System.Drawing.Color.Green;
             this.label5.Name = "label5";
             this.label5.Tag = "custom";
+            this.label5.Visible = false;
+            this.label5.Enabled = false;
             // 
             // label3
             // 
@@ -2559,6 +2552,8 @@ namespace MissionPlanner.GCSViews
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Name = "label3";
             this.label3.Tag = "custom";
+            this.label3.Visible = false;
+            this.label3.Enabled = false;
             // 
             // label4
             // 
@@ -2566,6 +2561,8 @@ namespace MissionPlanner.GCSViews
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Name = "label4";
             this.label4.Tag = "custom";
+            this.label4.Visible = false;
+            this.label4.Enabled = false;
             // 
             // lbl_hdop
             // 
@@ -2817,7 +2814,7 @@ namespace MissionPlanner.GCSViews
 
         }
 
-  
+
 
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer ZedGraphTimer;

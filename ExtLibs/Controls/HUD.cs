@@ -3696,7 +3696,7 @@ namespace MissionPlanner.Controls
 
             if (SixteenXNine)
             {
-                int ht = (int) (this.Width / 1.777f);
+                int ht = (int) (this.Width / 1.277f);
                 if (ht >= this.Height + 5 || ht <= this.Height - 5)
                 {
                     this.Height = ht;
@@ -3706,7 +3706,7 @@ namespace MissionPlanner.Controls
             else
             {
                 // 4x3
-                int ht = (int) (this.Width / 1.333f);
+                int ht = (int) (this.Width / 1.033f);
                 if (ht >= this.Height + 5 || ht <= this.Height - 5)
                 {
                     this.Height = ht;
