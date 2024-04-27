@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace MissionPlanner
 {
@@ -47,7 +49,7 @@ namespace MissionPlanner
             this.status1 = new MissionPlanner.Controls.Status();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.MenuFlightData = new System.Windows.Forms.ToolStripButton();
-            this.MenuFlightPlanner = new System.Windows.Forms.ToolStripButton();
+            this.MenuFlightPlanner = new System.Windows.Forms.Button();
             this.MenuInitConfig = new System.Windows.Forms.ToolStripButton();
             this.MenuConfigTune = new System.Windows.Forms.ToolStripButton();
             this.MenuSimulation = new System.Windows.Forms.ToolStripButton();
@@ -134,12 +136,6 @@ namespace MissionPlanner
             this.MainMenu.GripMargin = new System.Windows.Forms.Padding(0);
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(45, 39);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuFlightData,
-            this.MenuFlightPlanner,
-            this.MenuInitConfig,
-            this.MenuConfigTune,
-            this.MenuSimulation,
-            this.MenuHelp,
             this.MenuConnect,
             this.toolStripConnectionControl,
             this.MenuArduPilot});
@@ -163,6 +159,10 @@ namespace MissionPlanner
             this.MenuFlightPlanner.Margin = new System.Windows.Forms.Padding(0);
             this.MenuFlightPlanner.Name = "MenuFlightPlanner";
             this.MenuFlightPlanner.Click += new System.EventHandler(this.MenuFlightPlanner_Click);
+            this.MenuFlightPlanner.Padding = new Padding(0, 0, 2, 6);
+            this.MenuFlightPlanner.TextAlign = ContentAlignment.MiddleCenter;
+            this.MenuFlightPlanner.ImageAlign = ContentAlignment.MiddleCenter;
+            this.MenuFlightPlanner.TextImageRelation = TextImageRelation.ImageBeforeText;
             // 
             // MenuInitConfig
             // 
@@ -242,7 +242,6 @@ namespace MissionPlanner
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -257,7 +256,7 @@ namespace MissionPlanner
         public Controls.Status status1;
         public System.Windows.Forms.MenuStrip MainMenu;
         public System.Windows.Forms.ToolStripButton MenuFlightData;
-        public System.Windows.Forms.ToolStripButton MenuFlightPlanner;
+        public System.Windows.Forms.Button MenuFlightPlanner;
         public System.Windows.Forms.ToolStripButton MenuInitConfig;
         public System.Windows.Forms.ToolStripButton MenuConfigTune;
         public System.Windows.Forms.ToolStripButton MenuSimulation;

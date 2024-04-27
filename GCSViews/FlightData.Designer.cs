@@ -309,9 +309,9 @@ namespace MissionPlanner.GCSViews
             this.SubMainLeft.Panel1.Controls.Add(this.hud1);
             // 
             // SubMainLeft.Panel2
-            // 
+            //
             this.SubMainLeft.Panel2.Controls.Add(this.tabControlactions);
-            this.SubMainLeft.Panel2.Controls.Add(this.panel_persistent);
+            //this.SubMainLeft.Panel2.Controls.Add(this.panel_persistent);
             // 
             // hud1
             // 
@@ -554,8 +554,6 @@ namespace MissionPlanner.GCSViews
             // 
             this.tabControlactions.ContextMenuStrip = this.contextMenuStripactionstab;
             this.tabControlactions.Controls.Add(this.tabQuick);
-             this.tabControlactions.Controls.Add(this.tabPagemessages);
-            this.tabControlactions.Controls.Add(this.tabTLogs);
             resources.ApplyResources(this.tabControlactions, "tabControlactions");
             this.tabControlactions.Name = "tabControlactions";
             this.tabControlactions.SelectedIndex = 0;
@@ -2818,8 +2816,8 @@ namespace MissionPlanner.GCSViews
 
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer ZedGraphTimer;
-        private System.Windows.Forms.SplitContainer MainH;
-        private System.Windows.Forms.SplitContainer SubMainLeft;
+        public System.Windows.Forms.SplitContainer MainH;
+        public System.Windows.Forms.SplitContainer SubMainLeft;
         private System.Windows.Forms.ToolStripMenuItem goHereToolStripMenuItem;
         private Controls.HUD hud1;
         private Controls.MyButton BUT_clear_track;
@@ -2835,7 +2833,7 @@ namespace MissionPlanner.GCSViews
         private AGaugeApp.AGauge Galt;
         private AGaugeApp.AGauge Gspeed;
         private AGaugeApp.AGauge Gvspeed;
-        private System.Windows.Forms.TableLayoutPanel tableMap;
+        public System.Windows.Forms.TableLayoutPanel tableMap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown Zoomlevel;
         private Controls.MyLabel label1;

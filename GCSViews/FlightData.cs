@@ -238,6 +238,10 @@ namespace MissionPlanner.GCSViews
             this.tabControlactions.ControlRemoved += (sender, e) => ManageLeftPanelVisibility();
             this.panel_persistent.ControlAdded += (sender, e) => ManageLeftPanelVisibility();
             this.panel_persistent.ControlRemoved += (sender, e) => ManageLeftPanelVisibility();
+
+            tabControlactions.SizeMode = TabSizeMode.Fixed;
+            tabControlactions.ItemSize = new Size(0, 1);
+
             //    _serializer = new DockStateSerializer(dockContainer1);
             //    _serializer.SavePath = Application.StartupPath + Path.DirectorySeparatorChar + "FDscreen.xml";
             //    dockContainer1.PreviewRenderer = new PreviewRenderer();
